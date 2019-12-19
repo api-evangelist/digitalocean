@@ -1,0 +1,856 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "DigitalOcean API-V2",
+        "description": "## API v2 Introduction\r\nWelcome to the DigitalOcean API documentation.\r\n\r\nThe DigitalOcean API allows you to manage Droplets and resources within the DigitalOcean cloud in a simple, programmatic way using conventional HTTP requests. The endpoints are intuitive and powerful, allowing you to easily make calls to retrieve information or to execute actions.\r\n\r\nAll of the functionality that you are familiar with in the DigitalOcean control panel is also available through the API, allowing you to script the complex actions that your situation requires.\r\n\r\nThe API documentation will start with a general overview about the design and technology that has been implemented, followed by reference information about specific endpoints.\r\n\r\nRequests\r\nAny tool that is fluent in HTTP can communicate with the API simply by requesting the correct URI. Requests should be made using the HTTPS protocol so that traffic is encrypted. The interface responds to different methods depending on the action required.",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsexample.com\/"
+    ],
+    "paths": {
+        "\/account": {
+            "get": {
+                "summary": "Get User Information",
+                "description": "Get [DigitalOcean](https:\/\/www.digitalocean.com\/) account",
+                "operationId": "AccountGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/certificates": {
+            "get": {
+                "summary": "List all certificates",
+                "description": "To list all of the certificates available on your account, send a GET request to \/v2\/certificates.\r\n\r\nThe result will be a JSON object with a certificates key. This will be set to an array of certificate objects, each of which will contain the standard certificate attributes:",
+                "operationId": "CertificatesGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create a new certificate",
+                "description": "To upload or create a new SSL certificate, send a POST request to \/v2\/certificates. When uploading a user-generated certificate, the private_key, leaf_certificate, and optionally the certificate_chain attributes should be provided. The type should be set to \"custom\". When generating a certificate using Let's Encrypt, the dns_names attribute must be provided, and the type should be set to \"lets_encrypt\".",
+                "operationId": "CertificatesPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/certificates\/892071a0-bb95-49bc-8021-3afd67a210bf": {
+            "get": {
+                "summary": "Retrieve an existing certificate",
+                "description": "To show information about an existing certificate, send a GET request to \/v2\/certificates\/$CERTIFICATE_ID.\r\n\r\nThe response will be a JSON object with a certificate key.",
+                "operationId": "Certificates892071a0Bb9549bc80213afd67a210bfGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete a certificate",
+                "description": "To delete a specific certificate, send a DELETE request to \/v2\/certificates\/$CERTIFICATE_ID.\r\n\r\nA status of 204 will be given. This indicates that the request was processed successfully, but that no response body is needed.",
+                "operationId": "Certificates892071a0Bb9549bc80213afd67a210bfDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/domains": {
+            "get": {
+                "summary": "List all Domains",
+                "description": "To retrieve a list of all of the domains in your account, send a GET request to \/v2\/domains.\r\n\r\nThe response will be a JSON object with a key called domains.",
+                "operationId": "DomainsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/droplets": {
+            "get": {
+                "summary": "Listing Droplets by Tag",
+                "description": "To list Droplets by a tag, send a GET request to \/v2\/droplets?tag_name=$TAG_NAME.\r\n\r\nThe response will match that of regular droplet listing request but will be filtered to only include the tagged Droplets.",
+                "operationId": "DropletsGet2",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "tag_name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create a new Droplet",
+                "description": "To create a new Droplet, send a POST request to \/v2\/droplets.\n\n\n",
+                "operationId": "DropletsPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/images\/63261821": {
+            "get": {
+                "summary": "Retrieve an existing Image by id",
+                "description": "To retrieve information about an image (public or private), send a GET request to \/v2\/images\/$IMAGE_ID.\r\n\r\nThe response will be a JSON object with a key called image. The value of this will be an image object containing the standard image attributes:",
+                "operationId": "Images63261821Get",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete an Image",
+                "description": "To delete an image, send a DELETE request to \/v2\/images\/$IMAGE_ID.\r\n\r\nA status of 204 will be given. This indicates that the request was processed successfully, but that no response body is needed",
+                "operationId": "Images63261821Delete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/regions": {
+            "get": {
+                "summary": "List all Regions",
+                "description": "To list all of the regions that are available, send a GET request to \/v2\/regions.\r\n\r\nThe response will be a JSON object with a key called _regions_. ",
+                "operationId": "RegionsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/snapshots": {
+            "get": {
+                "summary": "List all Volume snapshots",
+                "description": "To retrieve only snapshots based on volumes, include the resource_type query paramter set to volume, \/v2\/snapshots?resource_type=volume.",
+                "operationId": "SnapshotsGet3",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "per_page",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "resource_type",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/sizes": {
+            "get": {
+                "summary": "List all Sizes",
+                "description": "To list all of the sizes, send a GET request to \/v2\/sizes.\r\n\r\nThe response will be a JSON object with a key called _sizes_. ",
+                "operationId": "SizesGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/account\/keys": {
+            "get": {
+                "summary": "List all Keys",
+                "description": "To list all of the keys in your account, send a GET request to \/v2\/account\/keys.\r\n\r\nThe response will be a JSON object with a key set to _ssh_keys_. ",
+                "operationId": "AccountKeysGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create a new Key",
+                "description": "To add a new SSH public key to your DigitalOcean account, send a POST request to \/v2\/account\/keys. Set the \"name\" attribute to the name you wish to use and the \"public_key\" attribute to a string of the full public key you are adding.\n\nThe response body will be a JSON object with a key set to ssh_key. The value will be the complete generated key object. This will have the standard key attributes:\n\nName\tType\tDescription\nid\tinteger\tThis is a unique identification number for the key. This can be use",
+                "operationId": "AccountKeysPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/account\/keys\/22162952": {
+            "get": {
+                "summary": "Retrieve an existing Key",
+                "description": "To show information about a key, send a GET request to \/v2\/account\/keys\/$KEY_ID or \/v2\/account\/keys\/$KEY_FINGERPRINT.\r\n\r\nThe response will be a JSON object with a key called _ssh_key_. ",
+                "operationId": "AccountKeys22162952Get",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update a Key",
+                "description": "To update the name of an SSH key, send a PUT request to either \/v2\/account\/keys\/$SSH_KEY_ID or \/v2\/account\/keys\/$SSH_KEY_FINGERPRINT. Set the \"name\" attribute to the new name you want to use.",
+                "operationId": "AccountKeys22162952Put",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Destroy a Key",
+                "description": "To destroy a public SSH key that you have in your account, send a DELETE request to \/v2\/account\/keys\/$KEY_ID or \/v2\/account\/keys\/$KEY_FINGERPRINT.\r\n\r\nA 204 status will be returned, indicating that the action was successful and that the response body is empty.",
+                "operationId": "AccountKeys22162952Delete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/tags": {
+            "get": {
+                "summary": "List all Tags",
+                "description": "To list all of your tags, you can send a GET request to \/v2\/tags.\r\n\r\nThe response will be a JSON object with a key called _tags_. ",
+                "operationId": "TagsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create a new Tag",
+                "description": "To create a Tag you can send a POST request to \/v2\/tags with a name attribute.\r\n\r\nThe response will be a JSON object with a key called _tag_.",
+                "operationId": "TagsPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/tags\/postman-do-tag\/resources": {
+            "post": {
+                "summary": "Tag a Resource",
+                "description": "Resources can be tagged by sending a POST request to \/v2\/tags\/$TAG_NAME\/resources with an array of json objects containing resource_id and resource_type attributes.\r\n\r\nCurrently only tagging of Droplets is supported. resource_id is expected to be the Droplet's id attribute as a string, and resource_type is expected to be the string droplet.",
+                "operationId": "TagsPostmanDoTagResourcesPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "FailedToAuthenticate": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "GetUserInformation": {
+                "type": "object"
+            },
+            "Account": {
+                "type": "object",
+                "properties": {
+                    "droplet_limit": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "floating_ip_limit": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "uuid": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "email_verified": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "status_message": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "EmptyCertificates": {
+                "type": "object",
+                "properties": {
+                    "certificates": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "Meta": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "CertificateNotFound": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "request_id": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "CreateANewCertificaterequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "private_key": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "leaf_certificate": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "certificate_chain": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "InvalidCertificateDataTls": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "request_id": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "ListAllDomains": {
+                "type": "object",
+                "properties": {
+                    "domains": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "Domain": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "ttl": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "zone_file": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "CreateANewDropletrequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "region": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "size": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "image": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "ssh_keys": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "backups": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "ipv6": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "user_data": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "private_networking": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "volumes": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "tags": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "NoDropletsFound": {
+                "type": "object",
+                "properties": {
+                    "droplets": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "Links": {
+                "type": "object"
+            },
+            "Pages": {
+                "type": "object",
+                "properties": {
+                    "first": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "prev": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "ListingDropletsByTagNone": {
+                "type": "object",
+                "properties": {
+                    "droplets": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "RetrieveAnExistingImageById": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "ListAllSnapshots": {
+                "type": "object",
+                "properties": {
+                    "snapshots": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "ListAllSizes": {
+                "type": "object",
+                "properties": {
+                    "sizes": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "Size": {
+                "type": "object",
+                "properties": {
+                    "slug": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "memory": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "vcpus": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "disk": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "transfer": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "price_monthly": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "price_hourly": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "regions": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "available": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "Links24": {
+                "type": "object"
+            },
+            "Pages25": {
+                "type": "object",
+                "properties": {
+                    "last": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "next": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "ListAllKeysFail": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "ListAllKeys": {
+                "type": "object",
+                "properties": {
+                    "ssh_keys": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "SshKey": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "fingerprint": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "public_key": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "CreateANewKeyrequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "public_key": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "CreateANewKey": {
+                "type": "object"
+            },
+            "RetrieveAnExistingKey": {
+                "type": "object"
+            },
+            "UpdateAKeyrequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "UpdateAKey": {
+                "type": "object"
+            },
+            "CreateANewTagrequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "CreateANewTagSuccess": {
+                "type": "object"
+            },
+            "Tag": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "Resources": {
+                "type": "object"
+            },
+            "Droplets": {
+                "type": "object",
+                "properties": {
+                    "count": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "last_tagged": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "EmptyTags": {
+                "type": "object",
+                "properties": {
+                    "tags": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "TagAResourcerequest": {
+                "type": "object",
+                "properties": {
+                    "resources": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "Resources47": {
+                "type": "object",
+                "properties": {
+                    "resource_id": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "resource_type": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            }
+        }
+    }
+}
