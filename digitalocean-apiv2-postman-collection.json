@@ -1,0 +1,734 @@
+{
+    "id": "a3f3e51f56a091cfe675af46f4a28ac9",
+    "name": "DigitalOcean API-V2",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "2698a9ade4bfad4d579f952ff31eb2ce",
+            "name": "Get User Information",
+            "url": "httpsexample.com\/\/account",
+            "description": "Get [DigitalOcean](https:\/\/www.digitalocean.com\/) account",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "2ac94a60f792cef0363f1cd60c68ecfa",
+            "name": "List all certificates",
+            "url": "httpsexample.com\/\/certificates",
+            "description": "To list all of the certificates available on your account, send a GET request to \/v2\/certificates.\r\n\r\nThe result will be a JSON object with a certificates key. This will be set to an array of certificate objects, each of which will contain the standard certificate attributes:",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "db82b439f7f91ea1cee2626ef794f1b0",
+            "name": "Create a new certificate",
+            "url": "httpsexample.com\/\/certificates",
+            "description": "To upload or create a new SSL certificate, send a POST request to \/v2\/certificates. When uploading a user-generated certificate, the private_key, leaf_certificate, and optionally the certificate_chain attributes should be provided. The type should be set to \"custom\". When generating a certificate using Let's Encrypt, the dns_names attribute must be provided, and the type should be set to \"lets_encrypt\".",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "8ade5036b766ccee72163cde55ad13c0",
+            "name": "Retrieve an existing certificate",
+            "url": "httpsexample.com\/\/certificates\/892071a0-bb95-49bc-8021-3afd67a210bf",
+            "description": "To show information about an existing certificate, send a GET request to \/v2\/certificates\/$CERTIFICATE_ID.\r\n\r\nThe response will be a JSON object with a certificate key.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "a0435680b9a2e2945f0bf7e70120e9d2",
+            "name": "Delete a certificate",
+            "url": "httpsexample.com\/\/certificates\/892071a0-bb95-49bc-8021-3afd67a210bf",
+            "description": "To delete a specific certificate, send a DELETE request to \/v2\/certificates\/$CERTIFICATE_ID.\r\n\r\nA status of 204 will be given. This indicates that the request was processed successfully, but that no response body is needed.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "f8af091b265a07e6a6af91c6e28b34a2",
+            "name": "List all Domains",
+            "url": "httpsexample.com\/\/domains",
+            "description": "To retrieve a list of all of the domains in your account, send a GET request to \/v2\/domains.\r\n\r\nThe response will be a JSON object with a key called domains.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "dd396e5c23ea69576c8e8345dd3b0dd1",
+            "name": "Listing Droplets by Tag",
+            "url": "httpsexample.com\/\/droplets",
+            "description": "To list Droplets by a tag, send a GET request to \/v2\/droplets?tag_name=$TAG_NAME.\r\n\r\nThe response will match that of regular droplet listing request but will be filtered to only include the tagged Droplets.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tag_name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "31dba93303a14f6c0241aa2d6fa3812a",
+            "name": "Create a new Droplet",
+            "url": "httpsexample.com\/\/droplets",
+            "description": "To create a new Droplet, send a POST request to \/v2\/droplets.\n\n\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "e5a676aa724f13c4444235d5df2dc274",
+            "name": "Retrieve an existing Image by id",
+            "url": "httpsexample.com\/\/images\/63261821",
+            "description": "To retrieve information about an image (public or private), send a GET request to \/v2\/images\/$IMAGE_ID.\r\n\r\nThe response will be a JSON object with a key called image. The value of this will be an image object containing the standard image attributes:",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "72d377a5606318c13c9c720b6ff0b1ec",
+            "name": "Delete an Image",
+            "url": "httpsexample.com\/\/images\/63261821",
+            "description": "To delete an image, send a DELETE request to \/v2\/images\/$IMAGE_ID.\r\n\r\nA status of 204 will be given. This indicates that the request was processed successfully, but that no response body is needed",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "c071ad31a0b6a19ba1c0ae3a1f0039cd",
+            "name": "List all Regions",
+            "url": "httpsexample.com\/\/regions",
+            "description": "To list all of the regions that are available, send a GET request to \/v2\/regions.\r\n\r\nThe response will be a JSON object with a key called _regions_. ",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "be6aaceae60b00786b90d9fef0c8d19b",
+            "name": "List all Volume snapshots",
+            "url": "httpsexample.com\/\/snapshots",
+            "description": "To retrieve only snapshots based on volumes, include the resource_type query paramter set to volume, \/v2\/snapshots?resource_type=volume.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "per_page",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "resource_type",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "7fb010958bd7751e09fe247e4718ec96",
+            "name": "List all Sizes",
+            "url": "httpsexample.com\/\/sizes",
+            "description": "To list all of the sizes, send a GET request to \/v2\/sizes.\r\n\r\nThe response will be a JSON object with a key called _sizes_. ",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "ac024dfe3a4c8986251e9804cc52b4f4",
+            "name": "List all Keys",
+            "url": "httpsexample.com\/\/account\/keys",
+            "description": "To list all of the keys in your account, send a GET request to \/v2\/account\/keys.\r\n\r\nThe response will be a JSON object with a key set to _ssh_keys_. ",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "d8a6bda9000a556b84cc303cf1b93e4a",
+            "name": "Create a new Key",
+            "url": "httpsexample.com\/\/account\/keys",
+            "description": "To add a new SSH public key to your DigitalOcean account, send a POST request to \/v2\/account\/keys. Set the \"name\" attribute to the name you wish to use and the \"public_key\" attribute to a string of the full public key you are adding.\n\nThe response body will be a JSON object with a key set to ssh_key. The value will be the complete generated key object. This will have the standard key attributes:\n\nName\tType\tDescription\nid\tinteger\tThis is a unique identification number for the key. This can be use",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "686e6319f260228ec9cab1c00c618416",
+            "name": "Retrieve an existing Key",
+            "url": "httpsexample.com\/\/account\/keys\/22162952",
+            "description": "To show information about a key, send a GET request to \/v2\/account\/keys\/$KEY_ID or \/v2\/account\/keys\/$KEY_FINGERPRINT.\r\n\r\nThe response will be a JSON object with a key called _ssh_key_. ",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "e7fdbe72ab43c61a0e1981f1e8d61fbf",
+            "name": "Update a Key",
+            "url": "httpsexample.com\/\/account\/keys\/22162952",
+            "description": "To update the name of an SSH key, send a PUT request to either \/v2\/account\/keys\/$SSH_KEY_ID or \/v2\/account\/keys\/$SSH_KEY_FINGERPRINT. Set the \"name\" attribute to the new name you want to use.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "25dbc9d41e57a59fd070c77d1e933fb6",
+            "name": "Destroy a Key",
+            "url": "httpsexample.com\/\/account\/keys\/22162952",
+            "description": "To destroy a public SSH key that you have in your account, send a DELETE request to \/v2\/account\/keys\/$KEY_ID or \/v2\/account\/keys\/$KEY_FINGERPRINT.\r\n\r\nA 204 status will be returned, indicating that the action was successful and that the response body is empty.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "2fb407af49b3f6115202399df405b815",
+            "name": "List all Tags",
+            "url": "httpsexample.com\/\/tags",
+            "description": "To list all of your tags, you can send a GET request to \/v2\/tags.\r\n\r\nThe response will be a JSON object with a key called _tags_. ",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "09ae9465380fe85580d9aa78d7663611",
+            "name": "Create a new Tag",
+            "url": "httpsexample.com\/\/tags",
+            "description": "To create a Tag you can send a POST request to \/v2\/tags with a name attribute.\r\n\r\nThe response will be a JSON object with a key called _tag_.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        },
+        {
+            "id": "83088bd9d25002fb2ad5a8c1f072f853",
+            "name": "Tag a Resource",
+            "url": "httpsexample.com\/\/tags\/postman-do-tag\/resources",
+            "description": "Resources can be tagged by sending a POST request to \/v2\/tags\/$TAG_NAME\/resources with an array of json objects containing resource_id and resource_type attributes.\r\n\r\nCurrently only tagging of Droplets is supported. resource_id is expected to be the Droplet's id attribute as a string, and resource_type is expected to be the string droplet.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "rawModeData": ""
+        }
+    ]
+}
