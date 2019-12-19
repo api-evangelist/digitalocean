@@ -1,0 +1,77 @@
+{
+    "name": "DigitalOcean",
+    "description": "<p>DigitalOcean is a simple and fast cloud hosting service built for developers. Customers can create a cloud server in 55 seconds, and pricing plans start at only $5 per month for 512MB of RAM, 20GB SSD, 1 CPU, and 1TB Transfer. Featuring a 99.99% Uptime SLA, DigitalOcean has servers located in New York, San Francisco, and Amsterdam. The DigitalOcean control panel interface is simple and intuitive, which power users can replicate on a larger scale with the company&rsquo;s API. DigitalOcean uses KVM virtualization and additionally hosts a library of helpful walkthroughs and tutorials that cover server configuration and optimization.<\/p>",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/DO_Logo_Horizontal_Black-3500c326.png",
+    "tags": [
+        "api provider",
+        "api service provider",
+        "cloud",
+        "compute",
+        "have api",
+        "relative data",
+        "service api"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/digitalocean\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "DigitalOcean API-V2",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/DO_Logo_Horizontal_Black-3500c326.png",
+            "humanURL": "https:\/\/www.digitalocean.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/digitalocean-apiv2-openapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/digitalocean-apiv2.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/digitalocean-apiv2-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Base",
+            "url": "https:\/\/api.digitalocean.com\/"
+        },
+        {
+            "type": "Blog",
+            "url": "https:\/\/www.digitalocean.com\/company\/blog\/"
+        },
+        {
+            "type": "Blog RSS",
+            "url": "https:\/\/www.digitalocean.com\/company\/blog\/feed.xml"
+        },
+        {
+            "type": "Command Line Interface",
+            "url": "https:\/\/github.com\/digitalocean\/doctl"
+        },
+        {
+            "type": "Developers",
+            "url": "https:\/\/developers.digitalocean.com\/"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/digitalocean"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/digitalocean"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/www.digitalocean.com"
+        }
+    ]
+}
