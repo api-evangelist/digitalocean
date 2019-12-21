@@ -1,5 +1,5 @@
 {
-    "id": "a3f3e51f56a091cfe675af46f4a28ac9",
+    "id": "04976f18faf501dd24dd3f950821db82",
     "name": "DigitalOcean API-V2",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "2698a9ade4bfad4d579f952ff31eb2ce",
+            "id": "ce0fed51e2f91e602ac6f74c7476e142",
             "name": "Get User Information",
             "url": "httpsexample.com\/\/account",
             "description": "Get [DigitalOcean](https:\/\/www.digitalocean.com\/) account",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "2ac94a60f792cef0363f1cd60c68ecfa",
+            "id": "8f6ad481f25689db562c4439b2b2eeee",
             "name": "List all certificates",
             "url": "httpsexample.com\/\/certificates",
             "description": "To list all of the certificates available on your account, send a GET request to \/v2\/certificates.\r\n\r\nThe result will be a JSON object with a certificates key. This will be set to an array of certificate objects, each of which will contain the standard certificate attributes:",
@@ -68,11 +68,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "db82b439f7f91ea1cee2626ef794f1b0",
+            "id": "e01b54679d0105ad5341e0c8fc9f0c12",
             "name": "Create a new certificate",
             "url": "httpsexample.com\/\/certificates",
             "description": "To upload or create a new SSL certificate, send a POST request to \/v2\/certificates. When uploading a user-generated certificate, the private_key, leaf_certificate, and optionally the certificate_chain attributes should be provided. The type should be set to \"custom\". When generating a certificate using Let's Encrypt, the dns_names attribute must be provided, and the type should be set to \"lets_encrypt\".",
@@ -106,11 +106,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "8ade5036b766ccee72163cde55ad13c0",
+            "id": "82987e764e94fb046d53c54cac12cf3b",
             "name": "Retrieve an existing certificate",
             "url": "httpsexample.com\/\/certificates\/892071a0-bb95-49bc-8021-3afd67a210bf",
             "description": "To show information about an existing certificate, send a GET request to \/v2\/certificates\/$CERTIFICATE_ID.\r\n\r\nThe response will be a JSON object with a certificate key.",
@@ -137,11 +137,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "a0435680b9a2e2945f0bf7e70120e9d2",
+            "id": "e2b85d505e2ade5162a2f144e811a45b",
             "name": "Delete a certificate",
             "url": "httpsexample.com\/\/certificates\/892071a0-bb95-49bc-8021-3afd67a210bf",
             "description": "To delete a specific certificate, send a DELETE request to \/v2\/certificates\/$CERTIFICATE_ID.\r\n\r\nA status of 204 will be given. This indicates that the request was processed successfully, but that no response body is needed.",
@@ -168,11 +168,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "f8af091b265a07e6a6af91c6e28b34a2",
+            "id": "1eebbbf996415240ea3a0fb4123785c1",
             "name": "List all Domains",
             "url": "httpsexample.com\/\/domains",
             "description": "To retrieve a list of all of the domains in your account, send a GET request to \/v2\/domains.\r\n\r\nThe response will be a JSON object with a key called domains.",
@@ -199,11 +199,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "dd396e5c23ea69576c8e8345dd3b0dd1",
+            "id": "1d2c4f4c722a5706ecedaf2d2ac40c94",
             "name": "Listing Droplets by Tag",
             "url": "httpsexample.com\/\/droplets",
             "description": "To list Droplets by a tag, send a GET request to \/v2\/droplets?tag_name=$TAG_NAME.\r\n\r\nThe response will match that of regular droplet listing request but will be filtered to only include the tagged Droplets.",
@@ -237,11 +237,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "31dba93303a14f6c0241aa2d6fa3812a",
+            "id": "19bd24646c83ee67b6bbf0e0203c27fc",
             "name": "Create a new Droplet",
             "url": "httpsexample.com\/\/droplets",
             "description": "To create a new Droplet, send a POST request to \/v2\/droplets.\n\n\n",
@@ -275,11 +275,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "e5a676aa724f13c4444235d5df2dc274",
+            "id": "1e2907d7890b587c294c2af5071245a2",
             "name": "Retrieve an existing Image by id",
             "url": "httpsexample.com\/\/images\/63261821",
             "description": "To retrieve information about an image (public or private), send a GET request to \/v2\/images\/$IMAGE_ID.\r\n\r\nThe response will be a JSON object with a key called image. The value of this will be an image object containing the standard image attributes:",
@@ -306,11 +306,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "72d377a5606318c13c9c720b6ff0b1ec",
+            "id": "dcd33d57f7030745618eed4b876484e2",
             "name": "Delete an Image",
             "url": "httpsexample.com\/\/images\/63261821",
             "description": "To delete an image, send a DELETE request to \/v2\/images\/$IMAGE_ID.\r\n\r\nA status of 204 will be given. This indicates that the request was processed successfully, but that no response body is needed",
@@ -337,11 +337,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "c071ad31a0b6a19ba1c0ae3a1f0039cd",
+            "id": "caf7c9d79662ba9041d73e6c075464ff",
             "name": "List all Regions",
             "url": "httpsexample.com\/\/regions",
             "description": "To list all of the regions that are available, send a GET request to \/v2\/regions.\r\n\r\nThe response will be a JSON object with a key called _regions_. ",
@@ -368,11 +368,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "be6aaceae60b00786b90d9fef0c8d19b",
+            "id": "49e7ba91328b05385f7296b483806e8c",
             "name": "List all Volume snapshots",
             "url": "httpsexample.com\/\/snapshots",
             "description": "To retrieve only snapshots based on volumes, include the resource_type query paramter set to volume, \/v2\/snapshots?resource_type=volume.",
@@ -420,11 +420,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "7fb010958bd7751e09fe247e4718ec96",
+            "id": "44d9fb60e8f2ab1619378e6c39e8b2f5",
             "name": "List all Sizes",
             "url": "httpsexample.com\/\/sizes",
             "description": "To list all of the sizes, send a GET request to \/v2\/sizes.\r\n\r\nThe response will be a JSON object with a key called _sizes_. ",
@@ -451,11 +451,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "ac024dfe3a4c8986251e9804cc52b4f4",
+            "id": "7422837a6b3739d8e8d7101359fd0378",
             "name": "List all Keys",
             "url": "httpsexample.com\/\/account\/keys",
             "description": "To list all of the keys in your account, send a GET request to \/v2\/account\/keys.\r\n\r\nThe response will be a JSON object with a key set to _ssh_keys_. ",
@@ -482,11 +482,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "d8a6bda9000a556b84cc303cf1b93e4a",
+            "id": "1e8c414e5deb944a31cd4455dcca171b",
             "name": "Create a new Key",
             "url": "httpsexample.com\/\/account\/keys",
             "description": "To add a new SSH public key to your DigitalOcean account, send a POST request to \/v2\/account\/keys. Set the \"name\" attribute to the name you wish to use and the \"public_key\" attribute to a string of the full public key you are adding.\n\nThe response body will be a JSON object with a key set to ssh_key. The value will be the complete generated key object. This will have the standard key attributes:\n\nName\tType\tDescription\nid\tinteger\tThis is a unique identification number for the key. This can be use",
@@ -520,11 +520,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "686e6319f260228ec9cab1c00c618416",
+            "id": "721d318fd2d49584613f54d05c1c7a41",
             "name": "Retrieve an existing Key",
             "url": "httpsexample.com\/\/account\/keys\/22162952",
             "description": "To show information about a key, send a GET request to \/v2\/account\/keys\/$KEY_ID or \/v2\/account\/keys\/$KEY_FINGERPRINT.\r\n\r\nThe response will be a JSON object with a key called _ssh_key_. ",
@@ -551,11 +551,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "e7fdbe72ab43c61a0e1981f1e8d61fbf",
+            "id": "a70884de805ab13a14334383524577a8",
             "name": "Update a Key",
             "url": "httpsexample.com\/\/account\/keys\/22162952",
             "description": "To update the name of an SSH key, send a PUT request to either \/v2\/account\/keys\/$SSH_KEY_ID or \/v2\/account\/keys\/$SSH_KEY_FINGERPRINT. Set the \"name\" attribute to the new name you want to use.",
@@ -589,11 +589,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "25dbc9d41e57a59fd070c77d1e933fb6",
+            "id": "74d3bc990ddadde0cfe9bae5720952b0",
             "name": "Destroy a Key",
             "url": "httpsexample.com\/\/account\/keys\/22162952",
             "description": "To destroy a public SSH key that you have in your account, send a DELETE request to \/v2\/account\/keys\/$KEY_ID or \/v2\/account\/keys\/$KEY_FINGERPRINT.\r\n\r\nA 204 status will be returned, indicating that the action was successful and that the response body is empty.",
@@ -620,11 +620,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "2fb407af49b3f6115202399df405b815",
+            "id": "1d764598a35662a79c3f19d01e52c011",
             "name": "List all Tags",
             "url": "httpsexample.com\/\/tags",
             "description": "To list all of your tags, you can send a GET request to \/v2\/tags.\r\n\r\nThe response will be a JSON object with a key called _tags_. ",
@@ -651,11 +651,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "09ae9465380fe85580d9aa78d7663611",
+            "id": "564c7c808a52d9496092bf982cba317c",
             "name": "Create a new Tag",
             "url": "httpsexample.com\/\/tags",
             "description": "To create a Tag you can send a POST request to \/v2\/tags with a name attribute.\r\n\r\nThe response will be a JSON object with a key called _tag_.",
@@ -689,11 +689,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         },
         {
-            "id": "83088bd9d25002fb2ad5a8c1f072f853",
+            "id": "596be643c2072276cc83a335aa4447df",
             "name": "Tag a Resource",
             "url": "httpsexample.com\/\/tags\/postman-do-tag\/resources",
             "description": "Resources can be tagged by sending a POST request to \/v2\/tags\/$TAG_NAME\/resources with an array of json objects containing resource_id and resource_type attributes.\r\n\r\nCurrently only tagging of Droplets is supported. resource_id is expected to be the Droplet's id attribute as a string, and resource_type is expected to be the string droplet.",
@@ -727,7 +727,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a3f3e51f56a091cfe675af46f4a28ac9",
+            "collectionId": "04976f18faf501dd24dd3f950821db82",
             "rawModeData": ""
         }
     ]
